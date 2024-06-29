@@ -1,0 +1,12 @@
+.shapes{
+width:100px;
+height : 100px;
+background:red;
+}
+
+.circle{
+    width:100px;
+    height : 100px;
+    background:green;
+    border-radius: 50%;
+}

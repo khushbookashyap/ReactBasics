@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--React library-->
+     <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+     <!--React DOM library-->
+     <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+     <!--Babel library-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <title>Class components</title>
+</head>
+<body>
+    <div id="app">React is not rendered yet</div>
+    <script type="text/babel">
+
+       class Shapes extends React.Component {
+        render(){
+            return(
+                <div>
+                    <Circle/>
+                </div>
+            )
+        }
+       }
+
+
+       class Circle extends React.Component{
+        render(){
+            var circleStyle = {
+                width:100,
+                height : 100,
+                background:'green',
+                borderRadius: '50%'
+            }
+            return(
+                <h3 style = {circleStyle}>Circle Class</h3>
+            )
+        }
+       }
+
+        ReactDOM.render(
+            //our first class component
+           <Shapes/>,document.getElementById("app")  
+        );
+    </script>
+    
+</body>
+</html>
